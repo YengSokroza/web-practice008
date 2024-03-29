@@ -43,22 +43,21 @@ export default function NavbarComponent() {
 		<Navbar fluid rounded className="w-full">
 			<NavbarBrand as={Link} href="https://flowbite-react.com">
 				<img
-					src="/next.svg"
-					className="mr-3 h-6 sm:h-9"
+					src="/logo.png"
+					className="mr-3 sm:h-9 h-7 "
 					alt="Flowbite React Logo"
 				/>
-				<span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-					Flowbite React
-				</span>
+				
 			</NavbarBrand>
 			<NavbarToggle />
 			<NavbarCollapse>
 				{menu.map((item, index) => (
 					<NavbarLink
-					key={index}
+						key={index}
 						as={Link}
 						href={item.path}
 						active={item.path === pathname}
+						className="text-red-100 hover:text-red-60"
 					>
 						{item.name}
 					</NavbarLink>

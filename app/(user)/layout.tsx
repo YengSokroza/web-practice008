@@ -8,11 +8,12 @@ import { inter, suwannaphum , localCustomFont} from "@/app/fonts";
 import { Metadata } from "next";
 
 export const metadata : Metadata = {
-	title: "ISTAD Ecommerce Web",
-	description: "ISTAD Ecommerce Web is a web application for selling products",
+	title: "Discover by ISTAD.co",
+	description: "Discover is a web application for selling everyday's need.",
+	keywords: "clothes",
 	openGraph:{
-		title: "ISTAD Ecommerce Web",
-		description: "ISTAD Ecommerce Web is a web application for selling products",
+		title: "Discover by ISTAD.co",
+		description: "Discover is a web application for selling everyday's need",
 		images: 'https://store.istad.co/media/brand_images/thumbnailstore.jpg'
 	}
 }
