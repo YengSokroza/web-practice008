@@ -1,14 +1,14 @@
-'use client'
+"use client"
 
 import CardProductComponent from '@/components/card/CardProduct';
 import { useRouter } from 'next/navigation'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'  
 
 const ENDPOINT = "https://fakestoreapi.com/products/"
 
 
 
-export default function page() {
+export default function Service() {
   const [products, setProducts] = useState([]);
   const router = useRouter();
 
@@ -23,8 +23,7 @@ export default function page() {
     <div className=' flex flex-wrap gap-4 justify-center py-8'>
     
         {products.map((product: any,index) => (
-          <CardProductComponent onClick={() => router.push(`/service/${product.id}`)} key={index} title={product.title} image={product.image} price={product.price}
-          
+          <CardProductComponent onClick={() => router.push(`/service/${product.id}`)} key={index} title={product.title} image={product.image} price={product.price}          
           />
         ))}
 

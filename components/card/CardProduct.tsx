@@ -12,21 +12,19 @@ type propsType = {
 
 
 
-export default function CardProductComponent({title, image,price,onClick}: propsType) {
+export default function CardProductComponent ({title, image,price,onClick} : propsType)  {
   return (
          <Card
         onClick = {onClick}
         className="max-w-xs h-[500px]"
         imgAlt="Apple Watch Series 7 in colors pink, silver, and black"
-        renderImage={() => (
-            <img
-              src={image || "defaul Image"}
-              className="object-contain w-full h-full overflow-hidden mx-auto"
-            />
-          )}
+        
 
     >
-        
+      <img
+        src={image || "default Image"}
+        className="object-contain w-full h-full overflow-hidden mx-auto"
+      />  
       <a href="#">
         <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
           {title}
@@ -91,3 +89,4 @@ export default function CardProductComponent({title, image,price,onClick}: props
    
   );
 }
+

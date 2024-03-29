@@ -11,7 +11,7 @@ type PropsParams = {
 const ENDPOINT = "https://fakestoreapi.com/products/"
 // {cache:"no-store"} is when we don't want to cache the data because by default next js is automatically caching
 // {next: {revalidate: 10}} when you to reload and cache again every 10 second
-export const getData = async(id: number) => {
+const getData = async(id: number) => {
     const res = await fetch(`${ENDPOINT}${id}`,{next: {revalidate: 10}});
     const data = await res.json();
     // console.log(data)
@@ -19,7 +19,7 @@ export const getData = async(id: number) => {
 }
 
 
-export default async function Detail(props: PropsParams) {
+export default async function detail(props: PropsParams) {
     let data =  await getData(props.params.id)
     console.log(data);
     
