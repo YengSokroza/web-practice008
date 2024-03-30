@@ -8,6 +8,19 @@ import quality from "@/public/quality.jpg"
 import packaging from "@/public/package.jpg"
 import { items } from './scrollData';
 import React from 'react'
+import { Metadata } from 'next';
+
+
+export const metadata : Metadata = {
+	title: "Learn about Discover by ISTAD.co",
+	description: "Discover is a web application for selling everyday's need.",
+	keywords: "clothes",
+	openGraph:{
+		title: "Learn about Discover by ISTAD.co",
+		description: "Discover is a web application for selling everyday's need",
+		images: 'https://store.istad.co/media/brand_images/discover.jpg'
+	}
+}
 
 
 const content = [

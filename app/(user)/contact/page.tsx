@@ -1,6 +1,19 @@
 import React from 'react'
 
 import ContactComponent from './component/contactInfo'
+import { Metadata } from 'next'
+
+export const metadata : Metadata = {
+	title: "Discover Contact Information",
+	description: "Discover is a web application for selling everyday's need.",
+	keywords: "clothes",
+	openGraph:{
+		title: "Discover Contact Information",
+		description: "Discover is a web application for selling everyday's need",
+		images: 'https://store.istad.co/media/brand_images/contact.jpg'
+	}
+}
+
 
 export default function Contact() {
   return (
