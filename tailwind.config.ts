@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
-const config: Config = {
+
+const config: Config  = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -18,11 +19,18 @@ const config: Config = {
         'red-100': '#C81D25',
         'red-60': '#FF757C'
       },
+     
+      
+      
+   
       
       
     },
     
   },
-  plugins: [require("flowbite/plugin")],
+  plugins: [
+    require("flowbite/plugin"),
+    require("@material-tailwind/react/utils/withMT")
+  ],
 };
 export default config;

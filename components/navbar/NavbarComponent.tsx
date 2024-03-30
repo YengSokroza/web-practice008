@@ -40,7 +40,7 @@ export default function NavbarComponent() {
 	// }
 
 	return (
-		<Navbar fluid rounded className="w-full">
+		<Navbar fluid rounded className="w-full fixed border-b-2 z-10 ">
 			<NavbarBrand as={Link} href="https://flowbite-react.com">
 				<img
 					src="/logo.png"
