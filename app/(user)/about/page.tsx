@@ -18,7 +18,7 @@ export const metadata : Metadata = {
 	openGraph:{
 		title: "Learn about Discover by ISTAD.co",
 		description: "Discover is a web application for selling everyday's need",
-		images: 'https://store.istad.co/media/brand_images/discover.jpg'
+		images: 'https://store.istad.co/media/brand_images/1.png'
 	}
 }
 
