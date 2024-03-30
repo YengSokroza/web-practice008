@@ -48,7 +48,15 @@ export default async function detail(props: Props) {
     
     console.log("This is props: ", props)
     console.log(props.searchParams.productName)
-	return <div className=' grid place-content-center text-lg my-8'> 
+	return(
+    <main className='h-screen flex justify-center flex-col items-center text-lg  pt-16 space-y-4'> 
+        <section className='space-y-2'>
+          <h1 className='xl:text-5xl text-3xl text-center font-semibold text-gray-800 text-red-100'>Ready to Make it Yours?</h1>
+          <p className='text-lg text-center px-16  '>Need personalized recommendations? Visit us or <a href="/contact" className="underline ">contact us</a> today!</p>
+        </section>
         <CardDetailComponent title={data?.title || "no title"}  description={data?.description || "no desctiption"} image={data?.image || "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png" }  /> 
-     </div>;
+     </main>
+  );
+
+    
 }

@@ -1,5 +1,11 @@
 import type { Config } from "tailwindcss";
 
+const defaultTheme = require("tailwindcss/defaultTheme");
+ 
+const colors = require("tailwindcss/colors");
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
 
 const config: Config  = {
   content: [
@@ -8,6 +14,7 @@ const config: Config  = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     'node_modules/flowbite-react/lib/esm/**/*.js'
   ],
+  darkMode: "class",
   theme: {
     extend: {
       backgroundImage: {
@@ -19,6 +26,17 @@ const config: Config  = {
         'red-100': '#C81D25',
         'red-60': '#FF757C'
       },
+      animation: {
+        scroll:
+          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+      },
+      keyframes: {
+        scroll: {
+          to: {
+            transform: "translate(calc(-50% - 0.5rem))",
+          },
+        },
+      },
      
       
       
@@ -29,8 +47,17 @@ const config: Config  = {
     
   },
   plugins: [
+   
     require("flowbite/plugin"),
-    require("@material-tailwind/react/utils/withMT")
+    require("@material-tailwind/react/utils/withMT"),
+    
   ],
+
+  
+
 };
+
+
+
 export default config;
+

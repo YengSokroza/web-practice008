@@ -10,6 +10,7 @@ import { Button } from "flowbite-react";
 import { useRouter } from "next/navigation";
 import { title } from "process";
 
+
 // change this to null to see the error page
 // const session = null
 const session = "some session data";
@@ -48,7 +49,7 @@ export default function Home() {
 					<p className="xl:text-lg  text-md font-black">Unleash Your Inner You </p>
 					<h1 className="xl:text-6xl  text-3xl font-semibold">Discover&apos;s Big Style Sale!</h1>
 					<p className="xl:text-lg  text-md font-medium">Get ready to express yourself with incredible deals on clothes, jewelry, and bags for both men and women! Discover your perfect outfit at a fraction of the price. Don&apos;t miss out  this sale won&apos;t last forever!</p>
-					<button className="bg-gray-50 px-8 py-2 rounded-md font-semibold text-gray-800" onClick={() => {
+					<button className="bg-gray-50 px-8 py-2 rounded-md font-semibold text-gray-800 hover:bg-gray-100" onClick={() => {
 						router.push('./service')
 					}} >Shop Now </button>
 					<SliderComponent />

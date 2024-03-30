@@ -6,6 +6,7 @@ import Error from "./error";
 import { ErrorBoundary } from "next/dist/client/components/error-boundary";
 import { inter, suwannaphum , localCustomFont} from "@/app/fonts";
 import { Metadata } from "next";
+import FooterComponent from "@/components/footer/FooterComponent";
 
 export const metadata : Metadata = {
 	title: "Discover by ISTAD.co",
@@ -30,6 +31,9 @@ export default function RootLayout({
 				<ErrorBoundary errorComponent={Error}>
 					<Suspense fallback={<Loading />}>{children}</Suspense>
 				</ErrorBoundary>
+				<footer>
+					<FooterComponent/>
+				</footer>
 			</body>
 		</html>
 	);
